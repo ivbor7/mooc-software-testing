@@ -33,4 +33,18 @@ public class RomanNumeralTest {
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
     }
+
+    @Test
+    public void numberWithManyTens() {
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("XX");
+        Assertions.assertEquals(20, result);
+    }
+
+    @Test
+    public void numberWithRandomChars() {
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("VXLIV");
+        Assertions.assertEquals(39, result);
+    }
 }
